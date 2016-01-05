@@ -1,0 +1,8 @@
+module.exports = {
+	global: {
+		hello: {
+			message: "Hello World!",
+			text: "Hello World!"
+		}
+	}
+}
