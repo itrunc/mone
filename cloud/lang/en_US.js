@@ -1,7 +1,7 @@
 module.exports = {
 	global: {
 		hello: {
-			message: "Hello World!",
+			value: "Hello World!",
 			text: "Hello World!"
 		}
 	}
