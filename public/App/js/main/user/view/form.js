@@ -1,6 +1,7 @@
 define(function(require, exports, module) {
 
 	var Captcha = require('main/user/view/captcha');
+  var Dialog = require('dialog');
 
 	var View = Backbone.View.extend({
 		el: '.login-box-body',
@@ -16,6 +17,12 @@ define(function(require, exports, module) {
 				}
 			}
 			if(this.captcha) this.resetCaptcha();
+
+			$(this.el).find('input').iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        radioClass: 'iradio_square-blue',
+        increaseArea: '20%' // optional
+      });
 		},
 		events: {
 			'submit form': 'onSubmit'
@@ -37,13 +44,20 @@ define(function(require, exports, module) {
 			xhr.done(function() {
 				var data = xhr.responseJSON;
 				if(data) {
-					console.log(data);
+          var dialog = Dialog.show({
+            backdrop: false,
+            title: data.title,
+            message: data.message + '<p>将在5秒后跳转</p>'
+          });
+          if(data.url) setTimeout(function(){
+            dialog.close();
+            window.location.href = data.url;
+          }, 5000);
 				} else {
 					window.location.href=xhr.responseText;
 				}
 			}).fail(function() {
-				console.log(xhr);
-				//Materialize.toast(xhr.responseText, 3000, 'red darken-1')
+        Dialog.alert(xhr.responseText);
 				if(self.captcha) self.resetCaptcha();
 			});
 		}

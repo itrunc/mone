@@ -4,6 +4,7 @@ define(function(require, exports, module) {
   };
   module.exports = Backbone.Router.extend({
     routes: {
+      '': 'loginPage',
       'signin': 'loginPage',
       'signup': 'registerPage',
       'reset': 'resetPage',

@@ -1,18 +1,17 @@
-<div class="row">
-	<div class="col s12 m6 offset-m3 l4 offset-l4">
-		<form class="card" method="post" action="/user">
-			<div class="card-content">
-				<span class="card-title black-text">重新发送激活邮件</span>
-				<div class="input-field">
-					<label>注册邮箱</label>
-					<input name="email" type="email" class="validate" required>
-				</div>
-				<input name="type" type="hidden" value="activate">
-			</div>
-			<div class="card-action">
-				<div class="input-captcha"></div>
-				<p><button type="submit" class="waves-effect btn">提交</button></p>
-			</div>
-		</form>
-	</div>
-</div>
+<p class="login-box-msg">重新发送激活邮件</p>
+<form method="post" action="/user">
+  <div class="form-group has-feedback">
+    <input name="email" type="email" class="form-control validate" placeholder="Email" required>
+    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+  </div>
+  <div class="input-captcha form-group"></div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-8">
+        <button type="submit" class="btn btn-primary btn-block btn-flat">提交</button>
+      </div><!-- /.col -->
+    </div>
+  </div>
+  <input name="type" type="hidden" value="activate">
+</form>

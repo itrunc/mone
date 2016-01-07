@@ -44,15 +44,6 @@
 
 <!-- iCheck -->
 <script src="plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
-    });
-  });
-</script>
 
 <!-- Backbone -->
 <script src="plugins/underscore/underscore-min.js"></script>
@@ -67,6 +58,7 @@
     base: '/App/js/',
     alias: {
       'handlebars': '/plugins/handlebars/handlebars-v3.0.3.seajs',
+      'dialog': '/plugins/backbone-bootstrap3-dialog/backbone-bootstrap3-dialog.cmd.min',
       'lang' : 'lang/en_US'
     }
   });

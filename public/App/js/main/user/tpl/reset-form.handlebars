@@ -1,21 +1,19 @@
-<div class="row">
-	<div class="col s12 m6 offset-m3 l4 offset-l4">
-		<form class="card" method="post" action="/user">
-			<div class="card-content">
-				<span class="card-title black-text">发送重置密码邮件</span>
-				<div class="input-field">
-					<label>Email</label>
-					<input name="email" type="email" class="validate" required>
-				</div>
-				<input name="type" type="hidden" value="reset">
-			</div>
-			<div class="card-action">
-				<div class="input-captcha"></div>
-				<p>
-					<button type="submit" class="waves-effect btn">重置密码</button>
-					<a href="/user#signin" class="waves-effect btn-flat">登录</a>
-				</p>
-			</div>
-		</form>
-	</div>
-</div>
+<p class="login-box-msg">发送重置密码邮件</p>
+<form method="post" action="/user">
+  <div class="form-group has-feedback">
+    <input name="email" type="email" class="form-control validate" placeholder="Email" required>
+    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+  </div>
+  <div class="input-captcha form-group"></div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-8">
+        <button type="submit" class="btn btn-primary btn-block btn-flat">重置密码</button>
+      </div><!-- /.col -->
+    </div>
+  </div>
+  <input name="type" type="hidden" value="reset">
+</form>
+
+<a href="/user#signin">登录</a>

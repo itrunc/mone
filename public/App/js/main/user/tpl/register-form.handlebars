@@ -1,34 +1,33 @@
-<div class="row">
-	<div class="col s12 m6 offset-m3 l4 offset-l4">
-		<form class="card" method="post" action="/user">
-			<div class="card-content">
-				<span class="card-title black-text">账户注册</span>
-				<!--<p>已绑定第三方帐号，请点击图标进入</p>-->
-				<div class="input-field">
-					<label>用户名</label>
-					<input name="username" type="text" class="validate" required>
-				</div>
-				<div class="input-field">
-					<label>Email</label>
-					<input name="email" type="email" class="validate" required>
-				</div>
-				<div class="input-field">
-					<label>密码</label>
-					<input name="password" type="password" class="validate" required>
-				</div>
-				<div class="input-field">
-					<label>确认密码</label>
-					<input name="password2" type="password" class="validate" required>
-				</div>
-				<input name="type" type="hidden" value="signup">
-			</div>
-			<div class="card-action">
-				<div class="input-captcha"></div>
-				<p>
-					<button type="submit" class="waves-effect btn">注册</button>
-					<a href="/user#signin" class="waves-effect btn-flat">已注册点此登录</a>
-				</p>
-			</div>
-		</form>
-	</div>
-</div>
+<p class="login-box-msg">账户注册</p>
+<form method="post" action="/user">
+  <div class="form-group has-feedback">
+    <input name="username" type="text" class="form-control validate" placeholder="User name" required>
+    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+  </div>
+  <div class="form-group has-feedback">
+    <input name="email" type="email" class="form-control validate" placeholder="Email" required>
+    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+  </div>
+  <div class="form-group has-feedback">
+    <input name="password" type="password" class="form-control validate" placeholder="Password" required>
+    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+  </div>
+  <div class="form-group has-feedback">
+    <input name="password2" type="password" class="form-control validate" placeholder="Password Again" required>
+    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+  </div>
+  <div class="input-captcha form-group"></div>
+
+  <div class="form-group">
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-8">
+        <button type="submit" class="btn btn-primary btn-block btn-flat">注册</button>
+      </div><!-- /.col -->
+    </div>
+  </div>
+  <input name="type" type="hidden" value="signup">
+</form>
+
+<div class="social-auth-links text-center"></div><!-- /.social-auth-links -->
+
+<a href="/user#signin">已注册点此登录</a>
