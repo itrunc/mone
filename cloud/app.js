@@ -30,14 +30,19 @@ app.use( sessions({
 }) );
 // 使用 Express 路由 API 服务 /hello 的 HTTP GET 请求
 
-app.get('/admin', mods.admin.render);
-
 //User Modules
 app.get('/captcha/start/:howmany', mods.user.startCaptcha);
 app.get('/captcha/image/:index', mods.user.replyImageCaptcha);
 app.get('/user', mods.user.render);
 app.get('/user/logout', mods.user.logOut);
 app.post('/user', mods.user.verifyCaptcha, mods.user.post);
+
+//Admin Modules
+app.get('/admin', mods.admin.shouldLogin, mods.admin.render);
+app.post('/admin/model/:model', mods.admin.shouldLogin, mods.admin.filterData, mods.admin.createModel);
+app.get('/admin/model/:model', mods.admin.shouldLogin, mods.admin.filterData, mods.admin.fetchModels);
+app.put('/admin/model/:model/:id', mods.admin.shouldLogin, mods.admin.filterData, mods.admin.updateModel);
+app.delete('/admin/model/:model/:id', mods.admin.shouldLogin, mods.admin.filterData, mods.admin.destroyModel);
 
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
 app.listen();

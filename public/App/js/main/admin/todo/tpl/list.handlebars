@@ -1,0 +1,27 @@
+<div class="box-header">
+  <h3 class="box-title"></h3>
+  <div class="box-tools">
+    <a href="#" class="btn btn-sm"><i class="glyphicon glyphicon-plus-sign"></i> {{data.label.newBatch}}</a>
+    <a href="#" class="btn btn-sm btn-create"><i class="glyphicon glyphicon-plus"></i> {{data.label.newOne}}</a>
+  </div>
+</div><!-- /.box-header -->
+<div class="box-body no-padding">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>{{data.th.title}}</th>
+        <th>{{data.th.date}}</th>
+        <th>{{data.th.beginTime}}</th>
+        <th>{{data.th.endTime}}</th>
+        <th>{{data.th.status}}</th>
+        <th>{{data.th.priority}}</th>
+        <th style="width: 80px"></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div><!-- /.box-body -->
+<div class="box-footer clearfix">
+  <button class="pull-right btn btn-default btn-more">{{data.label.more}} <i class="fa fa-arrow-circle-right"></i></button>
+</div><!-- /.box-footer -->
+<div class="overlay"><i class="fa fa-refresh fa-spin"></i></div>

@@ -1,13 +1,13 @@
 define(function(require, exports, module) {
-  var AnchorView = require('layouts/sidebar/view/anchor'),
-    TreeView = require('layouts/sidebar/view/treeview'),
-    HeaderView = require('layouts/sidebar/view/header'),
-    AnchorModel = require('layouts/sidebar/model/anchor'),
-    sidebar = require('layouts/sidebar/sidebar');
+  var AnchorView = require('main/admin/layouts/sidebar/view/anchor'),
+    TreeView = require('main/admin/layouts/sidebar/view/treeview'),
+    HeaderView = require('main/admin/layouts/sidebar/view/header'),
+    AnchorModel = require('main/admin/layouts/sidebar/model/anchor'),
+    sidebar = require('main/admin/layouts/sidebar/sidebar');
 
   var View = Backbone.View.extend({
     el: '.main-sidebar',
-    template: require('layouts/sidebar/tpl/view.tpl'),
+    template: require('main/admin/layouts/sidebar/tpl/view.tpl'),
     initialize: function(options) {
       this.$el.html(this.template);
 

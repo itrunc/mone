@@ -1,86 +1,109 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <title><%=title%></title>
-        <!-- Bootstrap 3.3.5 -->
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="plugins/Font-Awesome/css/font-awesome.min.css">
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="plugins/ionicons/css/ionicons.min.css">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="AdminLTE/css/AdminLTE.min.css">
-        <!-- AdminLTE Skins. Choose a skin from the css/skins
-             folder instead of downloading all of them to reduce the load. -->
-        <link rel="stylesheet" href="AdminLTE/css/skins/_all-skins.min.css">
-        
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="plugins/html5shiv/html5shiv.min.js"></script>
-        <script src="plugins/Respond/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body class="hold-transition skin-blue sidebar-mini">
-        <div class="wrapper">
-            <header class="main-header">
-                <a class="logo">
-                    <span class="logo-mini"><b>Mone</b></span>
-                    <span class="logo-lg"><b>Mone</b> Todo</span>
-                </a> <!--./logo-->
-                <nav class="navbar navbar-static-top" role="navigation">
-                    <!-- Sidebar toggle button-->
-                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                        <span class="sr-only">Toggle navigation</span>
-                    </a>
-                    <div class="navbar-custom-menu">
-                        <ul class="nav navbar-nav"></ul>
-                    </div>
-                </nav> <!--/.navbar-->
-            </header> <!--/.main-header-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title><%=title%></title>
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/Font-Awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="plugins/ionicons/css/ionicons.min.css">
+  <!-- Datepicker -->
+  <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+  <!-- Timepicker -->
+  <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/iCheck/minimal/blue.css">
+  <!-- select2 -->
+  <link rel="stylesheet" href="plugins/select2/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="AdminLTE/css/AdminLTE.min.changed.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="AdminLTE/css/skins/_all-skins.min.css">
 
-            <aside class="main-sidebar"></aside> <!--/.main-sidebar-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="plugins/html5shiv/html5shiv.min.js"></script>
+  <script src="plugins/Respond/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+  <header class="main-header">
+    <a class="logo">
+      <span class="logo-mini"><b>Mone</b></span>
+      <span class="logo-lg"><b>Mone</b> Todo</span>
+    </a> <!--./logo-->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav"></ul>
+      </div>
+    </nav> <!--/.navbar-->
+  </header> <!--/.main-header-->
 
-            <div class="content-wrapper"></div> <!--/.content-wrapper-->
+  <aside class="main-sidebar"></aside> <!--/.main-sidebar-->
 
-            <footer class="main-footer"></footer> <!--/.main-footer-->
-        </div>
+  <div class="content-wrapper"></div> <!--/.content-wrapper-->
 
-        <!-- jQuery 2.1.4 -->
-        <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
-        <!-- jQuery UI 1.11.4 -->
-        <script src="plugins/jQueryUI/jquery-ui.min.js"></script>
-        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-        <!-- Bootstrap 3.3.5 -->
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+  <footer class="main-footer"></footer> <!--/.main-footer-->
+</div>
 
-        <!-- AdminLTE App -->
-        <script src="AdminLTE/js/app.min.js"></script>
+<!-- jQuery 2.1.4 -->
+<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="plugins/jQuery/jquery.form.js"></script>
+<script src="plugins/jQuery/jquery.serializejson.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jQueryUI/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 
-        <!-- Handlebars -->
-        <!--<script src="plugins/handlebars/handlebars.runtime.js"></script>-->
+<!-- Moment -->
+<script src="plugins/moment/moment.min.js"></script>
 
-        <!-- Backbone -->
-        <script src="plugins/underscore/underscore-min.js"></script>
-        <script src="plugins/backbone/backbone-min.js"></script>
+<!-- Datepicker -->
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- Timepicker -->
+<script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<!-- iCheck -->
+<script src="plugins/iCheck/icheck.min.js"></script>
+<!-- select2 -->
+<script src="plugins/select2/select2.min.js"></script>
 
-        <!-- SeaJS -->
-        <script src="plugins/seajs/sea.js"></script>
-        <script src="plugins/seajs-text/seajs-text-debug.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
 
-        <script>
-            seajs.config({
-                base: '/App/js/',
-                alias: {
-                    'handlebars': '/plugins/handlebars/handlebars-v3.0.3.seajs',
-                    'lang' : 'lang/en_US'
-                }
-            });
-            seajs.use('/App/js/main/<%=appname%>');
-        </script>
+<!-- AdminLTE App -->
+<script src="AdminLTE/js/app.min.js"></script>
 
-    </body>
+<!-- Backbone -->
+<script src="plugins/underscore/underscore-min.js"></script>
+<script src="plugins/backbone/backbone-min.js"></script>
+
+<!-- SeaJS -->
+<script src="plugins/seajs/sea.js"></script>
+<script src="plugins/seajs-text/seajs-text-debug.js"></script>
+
+<script>
+  seajs.config({
+    base: '/App/js/',
+    alias: {
+      'handlebars': '/plugins/handlebars/handlebars-v3.0.3.seajs',
+      'handlebars-helper': 'lib/handlebars-helper',
+      'dialog': 'lib/dialog',
+      'lang' : 'lang/zh_CN',
+      'common': 'lib/common'
+    }
+  });
+  seajs.use('/App/js/main/<%=appname%>');
+</script>
+
+</body>
 </html>

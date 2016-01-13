@@ -1,0 +1,82 @@
+<div class="form-group">
+  <label for="type">{{data.label.type}}</label>
+  <select name="type" id="type" class="form-control">
+    {{#each data.select.type}}
+      <option value="{{value}}" {{#eq value ../data.model.type}}selected="selected"{{/eq}}>{{text}}</option>
+    {{/each}}
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="title">{{data.label.title}}</label>
+  <input name="title" id="title" type="text" class="form-control"
+         placeholder="{{data.placeholder.title}}"
+         value="{{data.model.title}}">
+</div>
+
+<div class="form-group">
+  <label for="date">{{data.label.date}}</label>
+  <div class="input-group">
+    <input name="date" id="date" type="text" class="form-control datepicker"
+           value="{{data.model.date}}">
+    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+  </div><!-- /.input group -->
+</div>
+
+<div class="form-group">
+  <div class="row">
+    <div class="col col-sm-6">
+      <div class="bootstrap-timepicker">
+        <label for="beginTime">{{data.label.beginTime}}</label>
+        <div class="input-group">
+          <input name="beginTime" id="beginTime" type="text" class="form-control timepicker"
+                 value="{{data.model.beginTime}}">
+          <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+        </div><!-- /.input group -->
+      </div>
+    </div> <!-- /.col -->
+    <div class="col col-sm-6">
+      <div class="bootstrap-timepicker">
+        <label for="endTime">{{data.label.endTime}}</label>
+        <div class="input-group">
+          <input name="endTime" id="endTime" type="text" class="form-control timepicker"
+                 value="{{data.model.endTime}}">
+          <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+        </div><!-- /.input group -->
+      </div>
+    </div> <!-- /.col -->
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="priority">{{data.label.priority}}</label>
+  <select name="priority" id="priority" class="form-control">
+    {{#each data.select.priority}}
+      <option value="{{value}}" {{#eq value ../data.model.priority}}selected="selected"{{/eq}}>{{text}}</option>
+    {{/each}}
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="status">{{data.label.status}}</label>
+  <select name="status" id="status" class="form-control">
+    {{#each data.select.status}}
+      <option value="{{value}}" {{#eq value ../data.model.status}}selected="selected"{{/eq}}>{{text}}</option>
+    {{/each}}
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="comments">{{data.label.comments}}</label>
+  <textarea name="comments" id="comments" class="form-control" rows="3"
+            placeholder="{{data.placeholder.comments}}">{{data.model.comments}}</textarea>
+</div>
+
+<div class="form-group">
+  <div class="checkbox icheck">
+    <label>
+      <input name="isPrivate" id="isPrivate" type="checkbox" value="1">
+      {{data.label.is_private}}
+    </label>
+  </div>
+</div>

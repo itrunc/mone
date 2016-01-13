@@ -11,7 +11,7 @@ define(function(require, exports, module) {
       icon: 'fa fa-pie-chart',
       menu: [
         {
-          link: '',
+          link: '#todo',
           label: lang.menu.todo.text
         },
         {
